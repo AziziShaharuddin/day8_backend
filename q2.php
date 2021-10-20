@@ -12,17 +12,20 @@
         </form>
         
         <?php
-        $name = $_POST["name"];
-        $nric = $_POST["nric"];
-        $mob_num = $_POST["mobNum"];
+        // $name = $_POST["name"];
+        // $nric = $_POST["nric"];
+        // $mob_num = $_POST["mobNum"];
 
-        function getName($name) {
+        function getName() {
+            $name = $_POST["name"];
             return $name;
         }
-        function getIC($nric){
+        function getIC(){
+            $nric = $_POST["nric"];
             return $nric;
         }
-        function getMobile($mob_num){
+        function getMobile(){
+            $mob_num = $_POST["mobNum"];
             return $mob_num;
         }
         function displayInfo($input){
@@ -30,11 +33,11 @@
         }
         
         echo "Name:"." ";
-        displayInfo($name);
+        displayInfo(getName());
         echo "IC Num:"." ";
-        displayInfo($nric);
+        displayInfo(getIC());
         echo "Mobile Num:"." ";
-        displayInfo($mob_num);
+        displayInfo(getMobile());
 
         ?>
     </body>
